@@ -394,8 +394,13 @@ void playTicTacToe(int whoseTurn)
 // Driver program
 int main()
 {
+    char choice;
     // Let us play the game with COMPUTER starting first
+    do{
     playTicTacToe(COMPUTER);
+    printf("Do you want to play again? (Y/N): ");
+    scanf(" %c", &choice);
+    } while(choice == 'Y' || choice == 'y');
 
     return 0;
 }
